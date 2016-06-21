@@ -43,6 +43,10 @@ app.get("/:DATE", function(request, response) {
 
 });
 
+app.get("*", function(request, response) {
+  response.end("404!");
+});
+
 app.listen(port, function() {
     console.log("App listening on port " + port);
 });
